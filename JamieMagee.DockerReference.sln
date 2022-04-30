@@ -1,0 +1,72 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31423.177
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{719809C2-A551-4C4A-9EFD-B10FB5E35BC0}"
+	ProjectSection(SolutionItems) = preProject
+		src\Directory.Build.props = src\Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F20E2797-D1E3-4321-91BB-FAE54954D2A0}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		Directory.Build.targets = Directory.Build.targets
+		dotnet-tools.json = dotnet-tools.json
+		global.json = global.json
+		Key.snk = Key.snk
+		build.cake = build.cake
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{E1B24F25-B8A4-46EE-B7EB-7803DCFC543F}"
+	ProjectSection(SolutionItems) = preProject
+		test\Directory.Build.props = test\Directory.Build.props
+		test\.editorconfig = test\.editorconfig
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JamieMagee.DockerReference", "src\JamieMagee.DockerReference\JamieMagee.DockerReference.csproj", "{481342D8-4A45-46A6-91FC-6FC1541747C6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JamieMagee.DockerReference.Test", "test\JamieMagee.DockerReference.Test\JamieMagee.DockerReference.Test.csproj", "{D8865014-7F43-4E67-BD35-FD48D713CA83}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{EFE1E5ED-D337-4874-82EC-D9FA0BC7D3AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{841C67EF-BBB2-4730-8E29-22FF3FD54306}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\build.yml = .github\workflows\build.yml
+		.github\workflows\codeql-analysis.yml = .github\workflows\codeql-analysis.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{481342D8-4A45-46A6-91FC-6FC1541747C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{481342D8-4A45-46A6-91FC-6FC1541747C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{481342D8-4A45-46A6-91FC-6FC1541747C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{481342D8-4A45-46A6-91FC-6FC1541747C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8865014-7F43-4E67-BD35-FD48D713CA83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8865014-7F43-4E67-BD35-FD48D713CA83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8865014-7F43-4E67-BD35-FD48D713CA83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8865014-7F43-4E67-BD35-FD48D713CA83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31078DEB-195B-4DE8-8545-1DE11F44A613}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31078DEB-195B-4DE8-8545-1DE11F44A613}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31078DEB-195B-4DE8-8545-1DE11F44A613}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31078DEB-195B-4DE8-8545-1DE11F44A613}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{481342D8-4A45-46A6-91FC-6FC1541747C6} = {719809C2-A551-4C4A-9EFD-B10FB5E35BC0}
+		{D8865014-7F43-4E67-BD35-FD48D713CA83} = {E1B24F25-B8A4-46EE-B7EB-7803DCFC543F}
+		{EFE1E5ED-D337-4874-82EC-D9FA0BC7D3AB} = {F20E2797-D1E3-4321-91BB-FAE54954D2A0}
+		{841C67EF-BBB2-4730-8E29-22FF3FD54306} = {EFE1E5ED-D337-4874-82EC-D9FA0BC7D3AB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73F36209-F8D6-4066-8951-D97729F773CF}
+	EndGlobalSection
+EndGlobal
