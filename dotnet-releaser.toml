@@ -1,0 +1,5 @@
+[msbuild]
+project = "JamieMagee.DockerReference.sln"
+[github]
+user = "JamieMagee"
+repo = "DockerReference"

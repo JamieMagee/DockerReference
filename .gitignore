@@ -1,0 +1,5 @@
+bin
+obj
+.idea
+artifacts-dotnet-releaser
+*.DotSettings.user
