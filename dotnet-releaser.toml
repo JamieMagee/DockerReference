@@ -3,3 +3,4 @@ project = "JamieMagee.DockerReference.sln"
 [github]
 user = "JamieMagee"
 repo = "DockerReference"
+version_prefix = "v"
