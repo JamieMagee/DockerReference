@@ -2,10 +2,10 @@
   "version": 1,
   "isRoot": true,
   "tools": {
-    "dotnet-releaser": {
-      "version": "0.4.0",
+    "cake.tool": {
+      "version": "2.2.0",
       "commands": [
-        "dotnet-releaser"
+        "dotnet-cake"
       ]
     }
   }

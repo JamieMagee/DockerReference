@@ -3,3 +3,4 @@ obj
 .idea
 artifacts-dotnet-releaser
 *.DotSettings.user
+artifacts
