@@ -58,28 +58,13 @@ internal static class ReferenceRegex
 
     private static Regex Expression(params Regex[] regexps) => new(string.Join(string.Empty, regexps.Select(re => re.ToString())));
 
-    /**
-         * group wraps the regexp in a non-capturing group.
-         */
     private static Regex Group(params Regex[] regexps) => new($"(?:{Expression(regexps)})");
 
-    /**
-         * repeated wraps the regexp in a non-capturing group to get one or more matches.
-         */
     private static Regex Optional(params Regex[] regexps) => new($"{Group(regexps)}?");
 
-    /**
-         * repeated wraps the regexp in a non-capturing group to get one or more matches.
-         */
     private static Regex Repeated(params Regex[] regexps) => new($"{Group(regexps)}+");
 
-    /**
-         * anchored anchors the regular expression by adding start and end delimiters.
-         */
     private static Regex Anchored(params Regex[] regexps) => new($"^{Expression(regexps)}$");
 
-    /**
-         * capture wraps the expression in a capturing group.
-         */
     private static Regex Capture(params Regex[] regexps) => new($"({Expression(regexps)})");
 }

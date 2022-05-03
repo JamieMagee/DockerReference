@@ -65,39 +65,6 @@ public sealed class ReferenceParser
         return CreateDockerReference(domain, repository, tag, digest);
     }
 
-    private static (string Domain, string Remainder) SplitDockerDomain(string name)
-    {
-        string domain;
-        string reminder;
-
-        var indexOfSlash = name.IndexOf('/');
-        if (indexOfSlash == -1 || !(
-                name.LastIndexOf('.', indexOfSlash) != -1 ||
-                name.LastIndexOf(':', indexOfSlash) != -1 ||
-                name.StartsWith("localhost/", StringComparison.InvariantCulture)))
-        {
-            domain = DefaultDomain;
-            reminder = name;
-        }
-        else
-        {
-            domain = name.Substring(0, indexOfSlash);
-            reminder = name.Substring(indexOfSlash + 1);
-        }
-
-        if (domain == LegacyDefaultDomain)
-        {
-            domain = DefaultDomain;
-        }
-
-        if (domain == DefaultDomain && !reminder.Contains('/'))
-        {
-            reminder = $"{OfficialRepositoryName}/{reminder}";
-        }
-
-        return (domain, reminder);
-    }
-
     public static IReference ParseFamiliarName(string name)
     {
         if (ReferenceRegex.AnchoredIdentifierRegexp.IsMatch(name))
@@ -132,6 +99,39 @@ public sealed class ReferenceParser
         }
 
         return ParseFamiliarName(name);
+    }
+
+    private static (string Domain, string Remainder) SplitDockerDomain(string name)
+    {
+        string domain;
+        string reminder;
+
+        var indexOfSlash = name.IndexOf('/');
+        if (indexOfSlash == -1 || !(
+                name.LastIndexOf('.', indexOfSlash) != -1 ||
+                name.LastIndexOf(':', indexOfSlash) != -1 ||
+                name.StartsWith("localhost/", StringComparison.InvariantCulture)))
+        {
+            domain = DefaultDomain;
+            reminder = name;
+        }
+        else
+        {
+            domain = name.Substring(0, indexOfSlash);
+            reminder = name.Substring(indexOfSlash + 1);
+        }
+
+        if (domain == LegacyDefaultDomain)
+        {
+            domain = DefaultDomain;
+        }
+
+        if (domain == DefaultDomain && !reminder.Contains('/'))
+        {
+            reminder = $"{OfficialRepositoryName}/{reminder}";
+        }
+
+        return (domain, reminder);
     }
 
     private static IReference CreateDockerReference(string? domain, string? repository, string? tag, string? digest)

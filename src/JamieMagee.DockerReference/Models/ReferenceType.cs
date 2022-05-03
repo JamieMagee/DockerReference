@@ -3,27 +3,27 @@
 public enum ReferenceType
 {
     /// <summary>
-    /// docker.io/library/ubuntu@sha256:abc123
+    /// <code>docker.io/library/ubuntu@sha256:abc123</code>.
     /// </summary>
     Canonical,
 
     /// <summary>
-    /// sha256:abc123
+    /// <code>sha256:abc123</code>.
     /// </summary>
     Digest,
 
     /// <summary>
-    /// docker.io/library/ubuntu:latest@sha256:abc123
+    /// <code>docker.io/library/ubuntu:latest@sha256:abc123</code>.
     /// </summary>
     Dual,
 
     /// <summary>
-    /// docker.io/library/ubuntu
+    /// <code>docker.io/library/ubuntu</code>.
     /// </summary>
     Repository,
 
     /// <summary>
-    /// docker.io/library/ubuntu:latest
+    /// <code>docker.io/library/ubuntu:latest</code>.
     /// </summary>
     Tagged,
 }

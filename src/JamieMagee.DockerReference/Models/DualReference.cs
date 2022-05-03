@@ -1,5 +1,9 @@
 ﻿namespace JamieMagee.DockerReference.Models;
 
+/// <summary>
+/// Contains: domain, repository, tag, and digest.
+/// For example: <code>docker.io/library/hello-world:latest@sha256:10d7d58d5ebd2a652f4d93fdd86da8f265f5318c6a73cc5b6a9798ff6d2b2e67</code>.
+/// </summary>
 public class DualReference : IReference
 {
     public DualReference(string domain, string repository, string tag, string digest)
