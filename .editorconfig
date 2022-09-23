@@ -457,5 +457,6 @@ dotnet_diagnostic.SA1633.severity = none
 # OTHER DEALINGS IN THE SOFTWARE.
 ##########################################
 dotnet_diagnostic.CS1591.severity = none
+dotnet_diagnostic.SA1202.severity = none
 dotnet_diagnostic.SA1600.severity = none
 dotnet_diagnostic.IDE0021.severity = none
