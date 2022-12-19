@@ -1,6 +1,6 @@
 # JamieMagee.DockerReference
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/JamieMagee/DockerReference/Build?style=for-the-badge)](https://github.com/JamieMagee/DockerReference/actions/workflows/build.yml?query=branch%3Amain)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/JamieMagee/DockerReference/build.yml?branch=main&style=for-the-badge)](https://github.com/JamieMagee/DockerReference/actions/workflows/build.yml?query=branch%3Amain)
 [![JamieMagee.DockerReference NuGet Package Version](https://img.shields.io/nuget/v/JamieMagee.DockerReference?style=for-the-badge)](https://www.nuget.org/packages/JamieMagee.DockerReference/)
 
 `JamieMagee.DockerReference` is a .NET port of [Docker's image reference](https://github.com/distribution/distribution/tree/main/reference) library.
